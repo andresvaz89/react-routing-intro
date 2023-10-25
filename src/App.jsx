@@ -4,6 +4,7 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ErrorPage from './pages/ErrorPage';
 import HomePageWithNavigate from './pages/HomePageWithNavigate';
+import ProjectDetailsPage from './pages/ProjectDetailsPage';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -23,6 +24,7 @@ function App() {
           path="/projects"
           element={<ProjectsPage projects={projectsData} />}
         />
+        <Route path="/projects/:projectId" element={<ProjectDetailsPage />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Routes>
